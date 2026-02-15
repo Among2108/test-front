@@ -1,19 +1,24 @@
 const items = document.querySelectorAll(".nav-item");
 const editmenu = document.getElementById("editdropmenu");
 const editorialBtn = document.getElementById("editorialBtn");
+const holdmenu = document.getElementById("holdmenu");
+
 
 function openDropdown() {
-  editmenu.classList.remove("opacity-0", "pointer-events-none");
+  editmenu.classList.remove("opacity-0",  "pointer-events-none");
+  editmenu.classList.add("opacity-100", );
 }
 
 function closeDropdown() {
-  editmenu.classList.add("opacity-0", "pointer-events-none");
+  editmenu.classList.remove("opacity-100", );
+  editmenu.classList.add("opacity-0",  "pointer-events-none");
 }
 
 items.forEach((item, index) => {
+
   item.addEventListener("mouseenter", () => {
 
-    // reset ก่อนทุกครั้ง
+    // reset ทุกปุ่มก่อน
     items.forEach(el =>
       el.classList.remove(
         "scale-150",
@@ -23,37 +28,62 @@ items.forEach((item, index) => {
       )
     );
 
-    // scale ตัวที่ hover
+    // ทำ effect ปุ่มที่ hover
     item.classList.add("scale-150", "font-bold");
 
-    // ขยับซ้ายขวา
     items.forEach((el, i) => {
       if (i < index) el.classList.add("-translate-x-8");
       if (i > index) el.classList.add("translate-x-8");
     });
 
-    // เปิด dropdown ถ้าเป็น editorial
+    // ถ้าเป็น editorial
     if (item === editorialBtn) {
       openDropdown();
-    } else {
-      closeDropdown();
+      editorialBtn.classList.add("opacity-0");
     }
   });
+
+  item.addEventListener("mouseleave", () => {
+
+    // reset เฉพาะตอนออกจากปุ่มนั้น
+    items.forEach(el =>
+      el.classList.remove(
+        "scale-150",
+        "-translate-x-8",
+        "translate-x-8",
+        "font-bold"
+      )
+    );
+
+    if (item === editorialBtn) {
+      closeDropdown();
+      editorialBtn.classList.remove("opacity-0");
+    }
+
+  });
+
 });
 
-/* ปิดทั้งหมดเมื่อออกจาก navbar */
-editmenu.addEventListener("mouseleave", () => {
+
+
+function showEditorial() {
+  openDropdown();
+  editorialBtn.classList.add("opacity-0");
+}
+
+function hideEditorial() {
   closeDropdown();
+  editorialBtn.classList.remove("opacity-0");
+}
 
-  items.forEach(el =>
-    el.classList.remove(
-      "scale-150",
-      "-translate-x-8",
-      "translate-x-8",
-      "font-bold"
-    )
-  );
-});
+// สำหรับ dropdown ที่อยู่ใน editorial
+
+editorialBtn.addEventListener("mouseenter", showEditorial);
+holdmenu.addEventListener("mouseenter", showEditorial);
+
+editorialBtn.addEventListener("mouseleave", hideEditorial);
+holdmenu.addEventListener("mouseleave", hideEditorial);
+
 
 
 
@@ -92,3 +122,15 @@ mainnav.classList.toggle("translate-y-64");
 }
 
 
+// LOGO
+
+  const logo = document.getElementById("logo");
+
+  document.addEventListener("keydown", function (e) {
+    if (e.code === "Space") {
+      e.preventDefault(); // กันหน้า scroll ลง
+      logo.classList.toggle("scale-[0.2]");
+      logo.classList.toggle("-translate-y-[60px]");
+     
+    }
+  });
