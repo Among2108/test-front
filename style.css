@@ -82,11 +82,10 @@ border: 0.5px solid #828282;
 border-radius: 100px;
 }
 
-.btn1:active {
+.btn1.active {
   /* Frame 43 */
 
-box-sizing: border-box;
-
+color: black;
 /* Auto layout */
 display: flex;
 flex-direction: row;
@@ -102,5 +101,22 @@ background: #FFFFFF;
 border: 0.5px solid #828282;
 border-radius: 100px;
 
+
+}
+
+headchoiec {
+  /* Frame 45 */
+
+
+
+width: 346px;
+height: 18px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
 
 }
