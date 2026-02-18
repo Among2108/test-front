@@ -132,3 +132,69 @@ buttons.forEach((btn) => {
     btn.classList.add("active");
   });
 });
+
+//  สลับ tab ใน FAQ
+const btnShipping = document.getElementById("btnShipping");
+const btnReturns = document.getElementById("btnReturns");
+
+const detail = document.getElementById("detail");
+const ship = document.getElementById("choiceship");
+const ret = document.getElementById("choicereturn");
+
+function showSection(active, inactive) {
+  detail.classList.remove("hidden");
+
+  // show active
+  active.classList.remove("opacity-0", "pointer-events-none");
+  active.classList.add("opacity-100");
+
+  // hide inactive
+  inactive.classList.add("opacity-0", "pointer-events-none");
+  inactive.classList.remove("opacity-100");
+
+  // ปิด details ทั้งหมดก่อน
+  document.querySelectorAll("#detail details").forEach(d => {
+    d.removeAttribute("open");
+  });
+}
+
+btnShipping.addEventListener("click", () => {
+  showSection(ship, ret);
+});
+
+btnReturns.addEventListener("click", () => {
+  showSection(ret, ship);
+});
+
+const wrapper = document.getElementById("customSelect");
+  const btn = document.getElementById("selectBtn");
+  const menu = document.getElementById("dropdownMenu");
+ 
+  const text = document.getElementById("selectedText");
+  const hiddenInput = document.getElementById("realValue");
+  const options = document.querySelectorAll(".option");
+
+  // Toggle dropdown
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+
+  options.forEach(option => {
+  option.addEventListener("click", () => {
+    text.textContent = option.textContent;
+    text.classList.remove("text-gray-400");
+    text.classList.add("text-black");
+
+    hiddenInput.value = option.dataset.value;
+
+    menu.classList.add("hidden");
+  });
+});
+
+
+document.addEventListener("click", (e) => {
+  if (!wrapper.contains(e.target)) {
+    menu.classList.add("hidden");
+  }
+});
