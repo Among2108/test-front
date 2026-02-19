@@ -13,7 +13,7 @@
 </head>
 
 <body class="">
-  <header class="fixed w-full z-10 bg-white">
+  <header class="fixed w-full z-20 bg-white">
     <nav class="relative">
       <!--  navbar สามส่วน -->
       <div class="flex justify-between items-center h-[45px] md:px-10 text-xs">
@@ -69,15 +69,20 @@
           <!-- ขอมือถือ -->
           <div class="md:hidden">
             <button onclick="toggleMenu()">
-              <svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg" id="yesmobile">
                 <path d="M0 0.5H20" stroke="black" />
                 <path d="M0 8.5H20" stroke="black" />
               </svg>
+              <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden" id="nomobile">
+<path d="M0.14917 16.4772L20.1492 0.477241" stroke="black"/>
+<path d="M0.14917 0.477242L20.1492 16.4772" stroke="black"/>
+</svg>
+
             </button>
 
             <div id="menumobile" class="hidden">
               <div
-                class="absolute h-[calc(100dvh-45px)] pt-4 pb-4 w-full flex flex-col items-center justify-between left-0 top-[45px] bg-white">
+                class="absolute h-[calc(100dvh-45px)] pt-4 pb-4 z-50 w-full flex flex-col items-center justify-between left-0 top-[45px] bg-white">
                 <ul class="h-[180px] w-full flex flex-col items-center text-sm gap-3">
                   <li>WOMEN</li>
                   <li>COLLECTION</li>
@@ -158,7 +163,7 @@
   </header>
   <!-- Logo destop-->
   <section id="logo"
-    class="hidden fixed top-[45px] left-0 w-full md:flex justify-center z-30 transition-transform duration-500 ease-out pointer-events-none"
+    class="hidden fixed top-[45px] left-0 w-full md:flex justify-center z-10 transition-transform duration-500 ease-out pointer-events-none"
     style="mix-blend-mode: difference" >
     <div class="mt-6" >
       <svg width="1402" height="145" viewBox="0 0 1402 145" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -190,7 +195,7 @@
   </section>
 
   <section id="logomb"
-    class="md:hidden fixed top-[45px] left-0 w-full flex justify-center z-30 transition-transform duration-500 ease-out pointer-events-none">
+    class="md:hidden fixed top-[45px] left-0 w-full flex justify-center z-10 transition-transform duration-500 ease-out pointer-events-none">
     <div class="mt-6" style="mix-blend-mode: difference">
       <svg width="378" height="39" viewBox="0 0 378 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

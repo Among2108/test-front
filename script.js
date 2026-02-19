@@ -85,6 +85,8 @@ function toggleDropdown() {
 function toggleMenu() {
   const menu = document.getElementById("menumobile");
   menu.classList.toggle("hidden");
+     document.getElementById("yesmobile").classList.toggle("hidden");
+    document.getElementById("nomobile").classList.toggle("hidden");
   console.log("mobile menu");
 }
 function dropdownEdit() {
@@ -96,7 +98,7 @@ function dropdownEdit() {
 
   if (isOpen) {
     // ปิด
-    editlist.classList.add("translate-x-2", "opacity-0", "pointer-events-none");
+    editlist.classList.add("translate-y-2", "opacity-0", "pointer-events-none");
     editbtn.classList.remove("font-bold", "scale-150");
   } else {
     // เปิด
