@@ -239,7 +239,7 @@
       </div>
     </div>
   </div>
-  <main class="flex flex-col gap-[100px]">
+  <main id="top" class="flex flex-col gap-[100px]">
     <!-- hero -->
     <section id="hero" class="relative h-screen">
       <video class="absolute top-[45px] w-full h-[calc(100dvh-45px)] object-cover" autoplay muted loop playsinline
@@ -630,9 +630,9 @@
     </section>
 
     <!-- form -->
-    <section id="form" class="flex flex-col justify-center  items-center gap[60px]">
-      <div class="px-[22px] flex flex-col gap-[60px]">
-        <div class="headform  text-center w-full flex flex-col items-center gap-4  ">
+    <section id="form" class="flex flex-col justify-center   gap-[94px]">
+      <div class="px-[22px] flex md:flex-row flex-col gap-[60px]">
+        <div class="headform  text-center w-full md:w-1/3 flex flex-col items-center gap-4  ">
           <h2 class="">Make an inquiry</h2>
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.</p>
         </div>
@@ -640,7 +640,7 @@
 
         <!-- form -->
 
-        <form class="flex flex-col gap-5">
+        <form class="flex flex-col gap-5 w-full">
 
           <div class="flex gap-[21px]">
             <label class="flex items-center gap-2 cursor-pointer">
@@ -661,76 +661,133 @@
           <!-- Email -->
           <div class="flex flex-col gap-2">
             <label class="text-[10px] text-black/30">Email*</label>
-            <input type="email"  value="Plaimanas@gmail.com"
+            <input type="email" value="Plaimanas@gmail.com"
               class="border-b focus:outline-none border-gray-300  px-4 py-3 " />
           </div>
-         
-           <div class="flex flex-col gap-2">
-            <input type="tel" placeholder="Phone Number*"  
+
+          <div class="flex flex-col gap-2">
+            <input type="tel" placeholder="Phone Number*"
               class="border-b focus:outline-none border-gray-300  px-4 py-3 " />
-          </div>     
-
-<!-- Wrapper -->
-<div class="relative w-full" id="customSelect">
+          </div>
 
 
-  <input type="hidden" name="subject" id="realValue">
+          <div class="relative w-full" id="customSelect">
 
-  
- <div
-    class="w-full border-b border-gray-300 py-3 px-4 flex justify-between items-center
+
+            <input type="hidden" name="subject" id="realValue">
+
+
+            <div class="w-full border-b border-gray-300 py-3 px-4 flex justify-between items-center
            text-gray-400 focus:outline-none transition">
 
-    <span id="selectedText">Select Subject</span>
+              <span id="selectedText">Select Subject</span>
 
-    
-      <button type="button"
-    id="selectBtn">
-    <svg id="arrow"
-      class="w-4 h-4 transition-transform duration-300"
-      fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg></button>
 
-</div>
-  
+              <button type="button" id="selectBtn">
+                <svg id="arrow" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-  <div id="dropdownMenu"
-    class="absolute left-0 w-full hidden bg-gray-100 shadow-lg rounded-md mt-2
+            </div>
+
+
+            <div id="dropdownMenu" class="absolute left-0 w-full hidden bg-gray-100 shadow-lg rounded-md mt-2
            overflow-hidden ">
 
-    <div class="px-4 py-3 cursor-pointer  option"
-         data-value="general">
-      General inquiry
-    </div>
+              <div class="px-4 py-3 cursor-pointer  option" data-value="general">
+                General inquiry
+              </div>
 
-    <div class="px-4 py-3 cursor-pointer  option"
-         data-value="job">
-      Job Application
-    </div>
+              <div class="px-4 py-3 cursor-pointer  option" data-value="job">
+                Job Application
+              </div>
 
-    <div class="px-4 py-3 cursor-pointer  option"
-         data-value="media">
-      Media & Press
-    </div>
+              <div class="px-4 py-3 cursor-pointer  option" data-value="media">
+                Media & Press
+              </div>
 
-  </div>
+            </div>
 
-</div>
+          </div>
+          <label class="flex items-center gap-2 cursor-pointer">
+
+            <input type="checkbox" class="peer w-4 h-4">
+
+            <span class="text-black/30 peer-checked:text-black transition">
+              I agree to all terms & conditions
+            </span>
+
+          </label>
 
 
           <!-- Button -->
-          <button type="submit" class="bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
-            Send Message
+          <button type="submit" class="text-base bg-black text-white py-3   w-[140px] h-[52px]">
+            Send
           </button>
 
         </form>
-        
       </div>
+      <a href="#top"><button class="Home w-fit mx-[10px] mb-[10px]">homepage</button></a>
     </section>
   </main>
-  <footer></footer>
+  <footer>
+    <div class="w-full  bg-[#F8F9F8] px-8 py-[22px] ">
+      <div class="md:flex justify-between">
+        <div class="grid grid-cols-2 gap-y-[51px] md:flex   ">
+          <div class="flex flex-col gap-[27px] ">
+            <h2>ABOUT</h2>
+            <div class="flex flex-col gap-[19px] text-xs">
+              <a href=""><span>Women</span></a>
+              <a href=""><span>Collections</span></a>
+              <a href=""><span>Editorial</span></a>
+              <a href=""><span>Stories</span></a>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[27px]">
+            <h2>HELP</h2>
+            <div class="flex flex-col gap-[19px] text-xs">
+              <a href=""><span>Payment Notification</span></a>
+              <a href=""><span>Customer Service</span></a>
+              <a href=""><span>FAQ</span></a>
+
+            </div>
+          </div>
+          <div class="flex flex-col gap-[27px]">
+            <h2>SOCIAL</h2>
+            <div class="flex flex-col gap-[19px] text-xs">
+              <a href=""><span>Instagram</span></a>
+              <a href=""><span>Facebook</span></a>
+
+
+            </div>
+          </div>
+          <div class="flex flex-col gap-[27px]">
+            <h2>LEGAL</h2>
+            <div class="flex flex-col gap-[19px] text-xs">
+              <a href=""><span>Terms & Conditions</span></a>
+              <a href=""><span>Privacy Policy</span></a>
+              <a href=""><span>Cookies Policy</span></a>
+
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[18px]">
+          <h2 class="news">NEWSLETTER</h2>
+          <input type="text" placeholder="Email"
+            class="border-b border-black focus:outline-none  text-xs bg-[#F8F9F8]  px-4 py-3 w-full " />
+          <button class="bg-[#E0E0E0] px-2 py-2">SUBSCRIBE</button>
+        </div>
+      </div>
+      <div class="flex justify-between mt-[55px]">
+        <h2>©PLAIMANAS</h2>
+        <h2>Web by Us</h2>
+      </div>
+    </div>
+
+
+  </footer>
 </body>
 
 </html>

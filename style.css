@@ -186,3 +186,38 @@ text-transform: uppercase;
 color: #000000;
 }
 
+.Home{
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+
+text-transform: uppercase;
+
+color: #000000;
+
+
+}
+
+.news{
+
+
+
+width: 89px;
+height: 15px;
+left: 22px;
+top: 423px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: #000000;
+
+
+}
