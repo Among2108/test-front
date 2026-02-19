@@ -117,7 +117,7 @@ const logo = document.getElementById("logo");
 
 document.addEventListener("keydown", function (e) {
   if (e.code === "Space") {
-    e.preventDefault(); // กันหน้า scroll ลง
+    e.preventDefault(); //  กันหน้า scroll ลง
     logo.classList.toggle("scale-[0.2]");
     logo.classList.toggle("-translate-y-[60px]");
   }

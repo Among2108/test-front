@@ -142,6 +142,11 @@ line-height: 16px;
 color: rgba(255, 255, 255, 0.6);
 }
 
+@media (min-width: 768px) {
+  .pdetail {
+    width: 100%;
+  }
+}
 
 /* ซ่อน marker default */
 summary {
@@ -172,8 +177,7 @@ details[open] .arrow {
 }
 
 .headform h2{
-  width: 346px;
-height: 40px;
+
 
 font-family: 'Hanken Grotesk';
 font-style: normal;
@@ -220,4 +224,10 @@ text-transform: uppercase;
 color: #000000;
 
 
+}
+
+
+.footermenu a:hover{
+  
+  opacity: 0.5;
 }
